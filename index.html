@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - Magilan</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #071b3a, #123b69 45%, #5b2c83);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 10% 20%, rgba(255,255,255,.8) 0 1px, transparent 2px),
+      radial-gradient(circle at 80% 15%, rgba(255,255,255,.7) 0 1px, transparent 2px),
+      radial-gradient(circle at 65% 70%, rgba(255,255,255,.7) 0 1px, transparent 2px),
+      radial-gradient(circle at 25% 80%, rgba(255,255,255,.6) 0 1px, transparent 2px);
+    background-size: 180px 180px, 230px 230px, 270px 270px, 210px 210px;
+    pointer-events: none;
+  }
+
+  .container {
+    width: min(1000px, 92%);
+    margin: auto;
+    padding: 35px 0 50px;
+    position: relative;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 30px 20px 25px;
+  }
+
+  .rocket {
+    font-size: 58px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-12px) rotate(5deg); }
+  }
+
+  h1 {
+    margin: 10px 0 5px;
+    font-size: clamp(42px, 8vw, 76px);
+    letter-spacing: 2px;
+    text-shadow: 0 5px 20px rgba(0,0,0,.35);
+  }
+
+  .tagline {
+    font-size: 20px;
+    opacity: .9;
+  }
+
+  .intro {
+    max-width: 720px;
+    margin: 20px auto 0;
+    padding: 20px 25px;
+    border-radius: 22px;
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.18);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 22px;
+    background: rgba(255,255,255,.11);
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    transition: transform .25s ease, background .25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,.17);
+  }
+
+  .card h2 {
+    margin: 0 0 14px;
+    font-size: 24px;
+  }
+
+  .facts {
+    display: grid;
+    gap: 10px;
+  }
+
+  .fact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 17px;
+  }
+
+  .icon {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(255,255,255,.14);
+    font-size: 21px;
+    flex-shrink: 0;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .chip {
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.15);
+    font-weight: bold;
+  }
+
+  .dream {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,193,7,.22), rgba(0,188,212,.2));
+  }
+
+  .dream .big {
+    font-size: 58px;
+    margin-bottom: 8px;
+  }
+
+  .dream h2 {
+    font-size: 32px;
+    margin: 5px 0;
+  }
+
+  .dream p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+    opacity: .75;
+  }
+
+  @media (max-width: 700px) {
+    .grid { grid-template-columns: 1fr; }
+    .dream { grid-column: auto; }
+    .container { padding-top: 20px; }
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <header class="hero">
+    <div class="rocket">🚀</div>
+    <h1>Hi, I'm Magilan!</h1>
+    <div class="tagline">Cricket lover • Gamer • Traveller • Future Astronaut</div>
+
+    <div class="intro">
+      👋 Hello! I'm <strong>Magilan</strong>. I'm studying in
+      <strong>7th Standard</strong>.
+      I love cricket, gaming, travelling and spending time with my family and friends.
+      One day, I want to explore space and become an <strong>astronaut!</strong> 🌌
+    </div>
+  </header>
+
+  <section class="grid">
+
+    <div class="card">
+      <h2>🏏 My Favourite Things</h2>
+      <div class="facts">
+        <div class="fact"><span class="icon">🏏</span> I love playing cricket.</div>
+        <div class="fact"><span class="icon">👨‍👦</span> I enjoy playing cricket with my dad.</div>
+        <div class="fact"><span class="icon">🎮</span> I like playing Nintendo.</div>
+        <div class="fact"><span class="icon">🚲</span> I like going cycling.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🍕 Food I Love</h2>
+      <div class="chips">
+        <span class="chip">🍗 Chicken Biryani</span>
+        <span class="chip">🍕 Pizza</span>
+        <span class="chip">🌮 Taco</span>
+      </div>
+      <p style="margin-top:18px; line-height:1.6;">
+        My absolute favourite is my <strong>mother's chicken biryani</strong>! ❤️
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🌍 Things I Enjoy</h2>
+      <div class="facts">
+        <div class="fact"><span class="icon">✈️</span> I love to travel and explore new places.</div>
+        <div class="fact"><span class="icon">🧑‍🤝‍🧑</span> I like playing with my friends.</div>
+        <div class="fact"><span class="icon">🎮</span> Gaming is always fun!</div>
+        <div class="fact"><span class="icon">🚴</span> Cycling is one of my favourite activities.</div>
+      </div>
+    </div>
+
+    <div class="card dream">
+      <div class="big">🌎 🚀 🪐</div>
+      <h2>My Big Dream</h2>
+      <p>
+        I want to become an <strong>ASTRONAUT</strong> and travel beyond Earth,
+        discover amazing things and explore the universe! ⭐
+      </p>
+    </div>
+
+  </section>
+
+  <div class="footer">
+    Made with ⭐ for Magilan
+  </div>
+
+</div>
+</body>
+</html>
